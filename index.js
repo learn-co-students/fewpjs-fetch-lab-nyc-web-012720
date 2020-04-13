@@ -4,6 +4,17 @@ function fetchBooks() {
   .then(json => renderBooks(json))
 }
 
+// alternate syntax 
+// function fetchBooks() {
+//   return fetch('https://anapioficeandfire.com/api/books')
+//   .then(function(response){
+//     return response.json()
+//   })
+//   .then(function(json){
+//     renderBooks(json)
+//   })
+// }
+
 function renderBooks(json) {
   const main = document.querySelector('main')
   json.forEach(book => {
